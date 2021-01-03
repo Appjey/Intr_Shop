@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('index.html', 'HomeController@index');
+Route::get('product.html', 'ProductController@index');
+Route::get('cart.html', 'CartController@index');
+Route::get('categories.html', 'CategoriesController@index');
+Route::get('checkout.html', 'CheckoutController@index');
+Route::get('contact.html', 'ContactController@index');
