@@ -8,6 +8,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home.index');
+        $products = ProductController::orderBy('created_at')->take(8)->get();
+        return view('home.index',[
+            '$products' => $products
+        ]);
     }
 }

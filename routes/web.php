@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'HomeController@index');
 Route::get('index.html', 'HomeController@index');
 Route::get('product.html', 'ProductController@index');
 Route::get('cart.html', 'CartController@index');
 Route::get('categories.html', 'CategoriesController@index');
 Route::get('checkout.html', 'CheckoutController@index');
 Route::get('contact.html', 'ContactController@index');
+Route::get('auth/login', 'Authenticate@index');

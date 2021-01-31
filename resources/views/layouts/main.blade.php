@@ -67,6 +67,7 @@
 													c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
                                             </g>
 										</svg>
+
                                         <div>Cart <span>(0)</span></div>
                                     </a>
                                 </div>
@@ -93,6 +94,29 @@
                                 </div>
                                 <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
                             </div>
+                            <!-- resources/views/auth/login.blade.php -->
+
+                            <form method="POST" action="/auth/login.html">
+                                {!! csrf_field() !!}
+
+                                <div>
+                                    Email
+                                    <input type="email" name="email" value="{{ old('email') }}">
+                                </div>
+
+                                <div>
+                                    Password
+                                    <input type="password" name="password" id="password">
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="remember"> Remember Me
+                                </div>
+
+                                <div>
+                                    <button type="submit">Login</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
